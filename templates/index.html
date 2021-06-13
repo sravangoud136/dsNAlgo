@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %}
+Home
+{% endblock title %}
+{% block body %}
+<div class="container">
+    <h4>Topics</h4>
+        {% for tag in tags %}
+         <li>
+            <a href="{%url 'problemswithtag' tag.tag%}">{{tag.tag}}</a>
+        </li>
+        {% endfor %}    
+   
+</div>
+{% endblock body %}
